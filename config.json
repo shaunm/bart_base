@@ -40,5 +40,5 @@
   "pad_token_id": 1,
   "scale_embedding": false,
   "static_position_embeddings": false,
-  "vocab_size": 50264
+  "vocab_size": 50265
 }
