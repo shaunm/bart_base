@@ -1,14 +1,16 @@
 {
-  "activation_dropout": 0.0,
+  "activation_dropout": 0.1,
   "activation_function": "gelu",
   "add_bias_logits": false,
   "add_final_layer_norm": false,
   "architectures": [
-    "BartForConditionalGeneration"
+    "BartModel",
+    "BartForConditionalGeneration",
+    "BartForSequenceClassification"
   ],
-  "attention_dropout": 0.0,
+  "attention_dropout": 0.1,
   "bos_token_id": 0,
-  "classif_dropout": 0.0,
+  "classif_dropout": 0.1,
   "d_model": 768,
   "decoder_attention_heads": 12,
   "decoder_ffn_dim": 3072,
@@ -16,6 +18,7 @@
   "decoder_layers": 6,
   "decoder_start_token_id": 2,
   "dropout": 0.1,
+  "early_stopping": true,
   "encoder_attention_heads": 12,
   "encoder_ffn_dim": 3072,
   "encoder_layerdrop": 0.0,
@@ -40,6 +43,27 @@
   "num_hidden_layers": 6,
   "pad_token_id": 1,
   "scale_embedding": false,
-  "static_position_embeddings": false,
+  "num_beams": 4,
+  "no_repeat_ngram_size": 3,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {      
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
   "vocab_size": 50265
 }
