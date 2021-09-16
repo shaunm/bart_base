@@ -26,8 +26,8 @@ Here is how to use this model in PyTorch:
 ```python
 from transformers import BartTokenizer, BartModel
 
-tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
-model = BartModel.from_pretrained('facebook/bart-large')
+tokenizer = BartTokenizer.from_pretrained('facebook/bart-base')
+model = BartModel.from_pretrained('facebook/bart-base')
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 outputs = model(**inputs)
