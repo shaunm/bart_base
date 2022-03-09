@@ -25,6 +25,7 @@
   "encoder_layers": 6,
   "eos_token_id": 2,
   "forced_eos_token_id": 2,
+  "forced_bos_token_id": 0,
   "gradient_checkpointing": false,
   "id2label": {
     "0": "LABEL_0",
